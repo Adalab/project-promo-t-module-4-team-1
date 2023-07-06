@@ -1,0 +1,134 @@
+@import '../core/variables.scss';
+@import '../core/mixins.scss';
+.form{
+    background-color: $light-lilac;
+    width: 80vw;
+    padding: 10px;
+    @media screen and (min-width:764px){
+      padding-top: 20px;
+      width: 80vw;
+    }
+    @media screen and (min-width: 1024px){
+      width: 38vw;
+    }
+    &__title{
+      color: $white;
+      text-align: center;
+      font-size: 37px;
+      text-shadow:    0 1px 1px rgba(black, .15),
+                        0 3px 10px rgba(black, .15),
+                        0 3px 20px rgba(black, .35);
+    }
+    &__askinfo{
+      padding: 20px;
+      text-align: center;
+      color: $white;
+      &--subtitle{
+        padding-bottom: 10px;
+      }
+      &--line{
+        width: 100%;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0)
+      );
+      }
+    }
+    &__project{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 10px;
+      border: none;
+      &--input{
+        background-color: $dark-lilac;
+        border-color: $white;
+        border-radius: 40px;
+        height: 42.72px;
+        color: $white;
+        padding-left: 15px;
+        padding-top: 5px;
+      }
+      &--textarea{
+        background-color: $dark-lilac;
+        border-color: $white;
+        border-radius: 30px;
+        height: 42.72px;
+        color: $white;
+        padding-left: 15px;
+        padding-top: 15px;
+        height: 110px;
+        
+      }
+      &--input::placeholder{
+        color: $white;
+      }
+      &--textarea::placeholder {
+        color: $white;
+      }
+    }
+    &__autor{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 10px;
+      border: none;
+      &--input{
+        background-color: $dark-lilac;
+        border-color: $white;
+        border-radius: 40px;
+        height: 42.72px;
+        color: $white;
+        padding-left: 15px;
+        padding-top: 5px;
+      }
+      &--textarea{
+        background-color: $dark;
+        border-color: $white;
+        border-radius: 40px;
+        height: 42.72px;
+        color: $white;
+        padding-left: 15px;
+        padding-top: 5px;
+        height: 110px;
+      }
+      &--input::placeholder{
+        color: $white;
+      }
+      &--textarea::placeholder {
+        color: $white;
+      }
+    }
+    &__buttons-img {
+      text-align: center;
+      &--btn{
+        width: 160px;
+        margin-top: 10px;
+        color: $white;
+        text-align: center;
+        border: none;
+        height: 43px;
+        background: linear-gradient(90deg, $dark -1.57%, $dark-lilac 98.43%);
+        border-radius: 40px;
+      }
+      &--btnlarge{
+        margin-top: 10px;
+        color: $white;
+        text-align: center;
+        height: 43px;
+        background: linear-gradient(90deg, $dark-lilac -1.57%, $light-lilac 98.43%);
+        border-radius: 40px;
+        width: 200px;
+        border: solid 2px $white;
+      }
+    }
+    &__card {
+      color: $white;
+      text-align: center;
+      padding: 20px;
+    }
+  }

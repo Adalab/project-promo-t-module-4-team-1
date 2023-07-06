@@ -1,0 +1,48 @@
+@import '../core/variables.scss';
+@import '../core/mixins.scss';
+
+.container {
+  background-color: $light-lilac;
+  //height: 130vh;
+  padding: 20px;
+  width: 100%;
+  font-family: $primary-text;
+
+}
+
+.main {
+  display: flex;
+  padding-top: 50px;
+  //height: 80vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    @include tablet() {
+      flex-direction: row;
+      align-content: flex-start;
+    }
+  }
+
+  &__hero {
+    color: $white;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet() {}
+  }
+}
+
+.hidden {
+  display: none;
+}
+/*
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Lora', serif;
+*/

@@ -1,0 +1,53 @@
+@import '../core/variables.scss';
+.landingPage{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.landingImg{
+    width: 300px;
+}
+.slogan{
+    text-align: center;
+    width: 95%;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    @media screen and (min-width:1024px) {
+        width: 50%;
+    }
+}
+.questions{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    @media screen and (min-width:1024px) {
+        flex-direction: row;
+    }
+}
+.question1, .question2{
+    text-align: center;
+    width: 90%;
+    background: linear-gradient(90deg, $light-lilac -1.57%, $dark-lilac 98.43%);
+    padding: 15px;
+    border-radius: 10px;
+    @media screen and (min-width:1024px) {
+        width: 40%;
+        height: 130px;
+        display: flex;
+        align-items: center;
+    }
+}
+.question2{
+    background: linear-gradient(90deg, $dark-lilac -1.57%, $light-lilac 98.43%);
+}
+.inicioButton{
+    background: linear-gradient(90deg, $dark-lilac -1.57%, $light-lilac 98.43%);
+    padding: 10px 20px;
+    border-radius: 15px;
+}
