@@ -70,10 +70,10 @@ const Form = ({
           className="form__project--textarea"
           type="text"
           placeholder="Descripción"
-          name="desc"
-          id="desc"
+          name="description"
+          id="description"
           onInput={handleInputs}
-          value={data.desc}
+          value={data.description}
         ></textarea>
       </fieldset>
       <section className="form__askinfo">

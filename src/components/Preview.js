@@ -20,7 +20,7 @@ const Preview = ({ data, handleReset}) => {
             {data.slogan || 'Diseños Exclusivos'}
           </p>
           <p className="project__desc">
-            {data.desc ||
+            {data.description ||
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut euismod ullamcorper orci, eget ultricies tellus auctor ac. Duis dignissim lorem eget imperdiet pharetra. Proin consectetur purus non nisi tristique eleifend. Nam sed gravida est.'}
           </p>
           <section className="project__technologies">
