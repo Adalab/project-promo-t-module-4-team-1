@@ -20,9 +20,14 @@ const Landing = () => {
           nuestra galeria de proyectos y escoge tu favorito!!
         </p>
       </div>
-      <Link to="/Inicio">
-        <button className='inicioButton'>INICIO</button>
-      </Link>
+      <div className="landingPage__buttons">
+        <Link to="/Inicio">
+          <button className='landingPage__buttons--btn'>CREAR PROYECTOS</button>
+        </Link>
+        <Link to="/Archivo">
+          <button className='landingPage__buttons--btn'>VER PROYECTOS</button>
+        </Link>
+      </div>
     </div>
   );
 };

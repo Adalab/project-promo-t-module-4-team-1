@@ -1,7 +1,35 @@
-.archive{
-    min-height: 80vh;
+@import '../core/mixins.scss';
+
+.archive {
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
+}
+
+.projectList {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    @media screen and (min-width:1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        list-style: none;
+
+        @media screen and (min-width:768px) {
+            max-width: 350px;
+        }
+
+        @media screen and (min-width:1024px) {
+            max-width: 500px;
+        }
+
+    }
 }

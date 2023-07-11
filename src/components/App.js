@@ -97,7 +97,7 @@ function App() {
             <Route
             path='/Archivo'
             element={
-              <Archivo/>
+              <Archivo data={data}/>
             }/>
         </Routes>
       </main>
