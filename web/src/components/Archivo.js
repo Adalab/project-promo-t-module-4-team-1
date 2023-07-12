@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import Card from './Card';
 import Hero from './Hero';
 import '../styles/layout/archive.scss';
-//import { useEffect } from "react";
-
+import { useEffect, useState } from "react";
+import getAllCardsApi from '../services/api';
 const Archivo = () => {
-  const archivedProjects = [
+  /*const archivedProjects = [
     {
       id: 1,
       name: 'Elegante Workspace',
@@ -58,19 +58,16 @@ const Archivo = () => {
       image: '',
       photo: '',
     },
-  ];
+  ];*/
+  const [archivedProjects,setArchivedProjects] = useState([]);
+  useEffect(() => {
+    getAllCardsApi()
+    .then(dataJson => {
+        setArchivedProjects(dataJson);
+    })
+  }, [])
+  console.log(archivedProjects);
 
-  /*
-    const [archivedProjects,setArchivedProjects] = useState([]);
-
-    useEffect(() => {
-        fetch('???')
-            .then()
-            .then(data => {
-                setArchivedProjects(data);
-            })
-    }, [])
-*/
   const cardsList = () => {
     return archivedProjects.map((eachProject) => (
       <li key={eachProject.id} className="projectList__card">

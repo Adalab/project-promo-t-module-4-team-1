@@ -9,4 +9,13 @@ const sendToApi = (data) => {
       return data;
     });
 };
-export default sendToApi;
+
+const getAllCardsApi = async () => {
+  const fetch = await fetch ('http://localhost:4000/api/allprojects');
+  const dataJson = await fetch.json();
+  return dataJson;
+}
+
+const objToExport = { sendToApi:sendToApi, getAllCardsApi:getAllCardsApi};
+
+export default objToExport;
