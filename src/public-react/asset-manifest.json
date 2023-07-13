@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.a0bd7633.css",
+    "main.js": "./static/js/main.ff1d3b0d.js",
+    "static/media/proyectimg.jpg": "./static/media/proyectimg.d35d9117ebe72f298db3.jpg",
+    "static/media/programadoresJU.png": "./static/media/programadoresJU.90e18fa2bb66855caca1.png",
+    "index.html": "./index.html",
+    "main.a0bd7633.css.map": "./static/css/main.a0bd7633.css.map",
+    "main.ff1d3b0d.js.map": "./static/js/main.ff1d3b0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0bd7633.css",
+    "static/js/main.ff1d3b0d.js"
+  ]
+}

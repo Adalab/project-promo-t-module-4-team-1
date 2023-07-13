@@ -64,7 +64,7 @@ server.post("/api/projectCard", async (req,res) => {
     res.json({success:true, cardURL:`http://localhost:4000/project/${resultProject.insertId}`});
   });
   
-  
+  server.use(express.static("./src/public-react"));
   
   
   
