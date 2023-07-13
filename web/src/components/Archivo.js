@@ -3,65 +3,11 @@ import Card from './Card';
 import Hero from './Hero';
 import '../styles/layout/archive.scss';
 import { useEffect, useState } from "react";
-import getAllCardsApi from '../services/api';
+import dataApi from '../services/api';
 const Archivo = () => {
-  /*const archivedProjects = [
-    {
-      id: 1,
-      name: 'Elegante Workspace',
-      slogan: 'Diseños Exclusivos',
-      technologies: '',
-      demo: '',
-      repo: '',
-      description: '',
-      autor: 'Irene',
-      job: '',
-      image: '',
-      photo: '',
-    },
-    {
-      id: 2,
-      name: '',
-      slogan: '',
-      technologies: '',
-      demo: '',
-      repo: '',
-      description: '',
-      autor: 'Aida',
-      job: '',
-      image: '',
-      photo: '',
-    },
-    {
-      id: 3,
-      name: '',
-      slogan: '',
-      technologies: '',
-      demo: '',
-      repo: '',
-      description: '',
-      autor: 'Celia',
-      job: '',
-      image: '',
-      photo: '',
-    },
-    {
-      id: 4,
-      name: '',
-      slogan: '',
-      technologies: '',
-      demo: '',
-      repo: '',
-      description: '',
-      autor: 'Andrea',
-      job: '',
-      image: '',
-      photo: '',
-    },
-  ];*/
   const [archivedProjects,setArchivedProjects] = useState([]);
   useEffect(() => {
-    getAllCardsApi()
+    dataApi.getAllCardsApi()
     .then(dataJson => {
         setArchivedProjects(dataJson);
     })
@@ -82,7 +28,7 @@ const Archivo = () => {
       <div className="archive">
         <ul className="projectList">{cardsList()}</ul>
         <Link className="projectList__btn" to="/Inicio">
-          VOLVER
+        CREAR PROYECTO
         </Link>
       </div>
     </div>

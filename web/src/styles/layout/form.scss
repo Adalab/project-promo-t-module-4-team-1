@@ -132,10 +132,23 @@
       color: $white;
       text-align: center;
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
   }
-
+.link{
+  color: $dark-lilac;
+  text-decoration: none;
+}
+.link:hover{
+  text-decoration: underline;
+  color: $dark;
+}
   #description {
     font-family: $primary-text;
   }
   
+.hidden{
+  display: none;
+}

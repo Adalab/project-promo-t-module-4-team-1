@@ -49,9 +49,9 @@ return (
               </section>
             </section>
             <section className="preview__autor--infoautor infoAutor">
-              <img className="infoAutor__image" src={eachProject.image || user} alt="#" />
-              <p className="infoAutor__job">{eachProject.job || 'Full Stack Developer'}</p>
-              <p className="infoAutor__name">{eachProject.autor || 'Emmelie Björklund'}</p>
+              <img className="infoAutor__image" src={eachProject.image} alt="#" />
+              <p className="infoAutor__job">{eachProject.job}</p>
+              <p className="infoAutor__name">{eachProject.autor}</p>
             </section>
           </section>
     </>

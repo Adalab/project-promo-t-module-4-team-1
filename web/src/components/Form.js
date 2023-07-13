@@ -6,6 +6,7 @@ const Form = ({
   serverResponse,
   handleClickCreateCard,
   handleChangeForm,
+  showCard
 }) => {
   const handleImage = (userImage) => {
     handleChangeForm('image', userImage);
@@ -121,9 +122,9 @@ const Form = ({
         </button>
       </section>
       {serverResponse.success === true && (
-        <section className="form__card">
+        <section className={`form__card ${showCard}`}>
           <span className=""> La tarjeta ha sido creada: </span>
-          <a href={serverResponse.cardURL} target="_blank" rel="noreferrer">
+          <a className='link' href={serverResponse.cardURL} target="_blank" rel="noreferrer">
             {serverResponse.cardURL}
           </a>
         </section>

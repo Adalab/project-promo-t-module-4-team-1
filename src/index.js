@@ -33,3 +33,43 @@ server.get('/api/allprojects', async (req, res) => {
     conn.end();
     res.json(result);
 });
+
+server.post("/api/projectCard", async (req,res) => {
+    const body = req.body;
+    console.log(body);
+    let insertAuthor = `INSERT INTO author (autor, job, image)
+    VALUES (?, ?, ?)`;
+    const conn = await getConnection();
+    const [resultAuthor] = await conn.query(insertAuthor, [
+      body.autor,
+      body.job,
+      body.image,
+    ]);
+    const idAuthor = resultAuthor.insertId;
+    console.log(resultAuthor);
+    let insertProject = `INSERT INTO projects (name, slogan, technologies, demo, repo, description, photo, fk_author)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
+    const [resultProject] = await conn.query(insertProject, [
+      body.name,
+      body.slogan,
+      body.technologies,
+      body.demo,
+      body.repo,
+      body.description,
+      body.photo,
+      idAuthor,
+    ]);
+    conn.end();
+    console.log(resultProject.insertId);
+    res.json({success:true, cardURL:`http://localhost:4000/project/${resultProject.insertId}`});
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
