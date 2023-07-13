@@ -1,0 +1,19 @@
+CREATE TABLE author (
+  idautor INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+  autor VARCHAR(1024) NOT NULL,
+  job VARCHAR(1024) NOT NULL,
+  image LONGTEXT NOT NULL
+);
+
+CREATE TABLE projects (
+  idprojects INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(1024) NOT NULL,
+  slogan VARCHAR(1024) NOT NULL,
+  technologies VARCHAR(1024) NOT NULL,
+  demo VARCHAR(1024) NOT NULL,
+  repo VARCHAR(1024) NOT NULL,
+  description VARCHAR(1024) NOT NULL,
+  photo LONGTEXT NOT NULL);
+  
+ALTER TABLE projects ADD COLUMN fk_author int;
+ALTER TABLE projects ADD FOREIGN KEY(fk_author) REFERENCES author (idautor);
