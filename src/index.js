@@ -26,7 +26,7 @@ server.listen( serverPort, () => {
 });
 
 server.get('/api/allprojects', async (req, res) => {
-    const selectProjects = 'SELECT * FROM projects';
+    const selectProjects = 'SELECT * FROM projects, author WHERE projects.fk_author = author.idautor';
     const conn = await getConnection();
     const [result] = await conn.query(selectProjects);
     console.log(result);
