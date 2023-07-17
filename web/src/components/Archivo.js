@@ -17,7 +17,7 @@ const Archivo = () => {
   const cardsList = () => {
     return archivedProjects.map((eachProject) => (
       <li key={eachProject.id} className="projectList__card">
-         <a href={`http://localhost:4000/api/projectCard/`+eachProject.idprojects}> 
+         <a className='link' href={`http://localhost:4000/api/projectCard/`+ eachProject.idprojects}> 
          <Card eachProject={eachProject} /> </a>
         </li>
     ));
