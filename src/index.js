@@ -64,8 +64,6 @@ server.post("/api/projectCard", async (req,res) => {
     console.log(resultProject.insertId);
     res.json({success:true, cardURL:`http://localhost:4000/project/${resultProject.insertId}`});
   });
-const staticServerPathWeb = './src/public-react';
-server.use(express.static(staticServerPathWeb));
 
 server.get('/api/projectCard/:idProject', async (req, res) => {
   const id = req.params.idProject;
@@ -75,3 +73,8 @@ server.get('/api/projectCard/:idProject', async (req, res) => {
   res.render('detail', results[0]);
 })
 
+const staticServerPathWeb = './src/public-react';
+server.use(express.static(staticServerPathWeb));
+
+const pathServerPublicStyles = './src/public-css';
+server.use(express.static(pathServerPublicStyles));
