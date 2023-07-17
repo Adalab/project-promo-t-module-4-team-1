@@ -5,6 +5,7 @@ const mysql = require('mysql2/promise') ;
 const server = express();
 
 server.use(cors());
+server.set('view engine', 'ejs');
 server.use(express.json({limit: '100mb'}));
 
 const getConnection = async () => {
@@ -65,3 +66,12 @@ server.post("/api/projectCard", async (req,res) => {
   });
 const staticServerPathWeb = './src/public-react';
 server.use(express.static(staticServerPathWeb));
+
+server.get('/api/projectCard/:idProject', async (req, res) => {
+  const id = req.params.idProject;
+  const sql = `SELECT * FROM author INNER JOIN projects ON fk_author = idautor WHERE idprojects= ? `;
+  const conn = await getConnection();
+  const [results] = await conn.query(sql, id);
+  res.render('detail', results[0]);
+})
+
