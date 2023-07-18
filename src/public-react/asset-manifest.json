@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.12954873.css",
-    "main.js": "./static/js/main.ff1d3b0d.js",
+    "main.css": "./static/css/main.76a8ebbc.css",
+    "main.js": "./static/js/main.a4b1f9ac.js",
     "static/media/proyectimg.jpg": "./static/media/proyectimg.d35d9117ebe72f298db3.jpg",
     "static/media/programadoresJU.png": "./static/media/programadoresJU.90e18fa2bb66855caca1.png",
     "index.html": "./index.html",
-    "main.12954873.css.map": "./static/css/main.12954873.css.map",
-    "main.ff1d3b0d.js.map": "./static/js/main.ff1d3b0d.js.map"
+    "main.76a8ebbc.css.map": "./static/css/main.76a8ebbc.css.map",
+    "main.a4b1f9ac.js.map": "./static/js/main.a4b1f9ac.js.map"
   },
   "entrypoints": [
-    "static/css/main.12954873.css",
-    "static/js/main.ff1d3b0d.js"
+    "static/css/main.76a8ebbc.css",
+    "static/js/main.a4b1f9ac.js"
   ]
 }
