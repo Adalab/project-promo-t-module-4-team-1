@@ -1,7 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise') ;
-
+const env = require('dotenv');
+env.config();
 const server = express();
 
 server.use(cors());
@@ -10,10 +11,10 @@ server.use(express.json({limit: '100mb'}));
 
 const getConnection = async () => {
     const connection = await mysql.createConnection( {
-        host: 'sql.freedb.tech',
-        database: 'freedb_project-module-4-team-1',
-        user: 'freedb_programadoras_junior',
-        password: 'M#8aVHtn4SpqAbP',
+        host: process.env.HOSTDB,
+        database: process.env.DATABASEDB,
+        user: process.env.USERNAMEDB,
+        password: process.env.PASS,
     });
     await connection.connect();
     console.log(`Conexion establecidad ${connection.threadId}`);
