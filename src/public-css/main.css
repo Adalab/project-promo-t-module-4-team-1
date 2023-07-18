@@ -6,10 +6,11 @@
 main{
   background-color:  #c0b7e8;
   padding-top: 60px;
-  height: 100vh;
+  height: 200%;
 }
 .preview {
   padding: 20px;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
