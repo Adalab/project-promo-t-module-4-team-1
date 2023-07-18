@@ -1,9 +1,6 @@
-import programación from '../images/programacion.jpeg';
 /*import cover2 from '../images/cover_2.jpeg';*/
 import {Route, Routes} from 'react-router-dom';
-import logo from '../images/logo-adalab.png';
-import user from '../images/user.jpeg';
-import sendToApi from '../services/api';
+import dataApi from '../services/api';
 import ls from '../services/LocalStorage';
 import { useEffect, useState } from 'react';
 import '../styles/core/reset.scss';
@@ -20,6 +17,7 @@ import Archivo from './Archivo';
 
 function App() {
   const [serverResponse, setServerResponse] = useState({});
+  const [showCard, setShowCard] = useState('hidden');
   const [data, setData] = useState(
     ls.get('objData', {
       name: '',
@@ -40,10 +38,11 @@ function App() {
   }, [data]);
   const handleClickCreateCard = (ev) => {
     ev.preventDefault();
-    sendToApi(data).then((result) => {
+    dataApi.sendToApi(data).then((result) => {
       setServerResponse(result);
       console.log(result.success);
     });
+    setShowCard('');
   };
   const handleInputs = (ev) => {
     setData({ ...data, [ev.target.id]: ev.target.value });
@@ -66,6 +65,7 @@ function App() {
       image: '',
       photo: '',
     })
+    setShowCard('hidden');
   }
   return (
     <div className="container">
@@ -90,6 +90,7 @@ function App() {
                     handleClickCreateCard={handleClickCreateCard}
                     serverResponse={serverResponse}
                     handleChangeForm={handleChangeForm}
+                    showCard={showCard}
                   ></Form>
                 </div>
               </>
@@ -97,7 +98,7 @@ function App() {
             <Route
             path='/Archivo'
             element={
-              <Archivo/>
+              <Archivo data={data}/>
             }/>
         </Routes>
       </main>

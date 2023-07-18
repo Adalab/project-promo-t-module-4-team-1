@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project detail</title>
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <main>
+      <section class="preview">
+        <img class="preview__image" src="<%=photo%>" alt="#" />
+        <section class="preview__autor">
+          <section class="preview__autor--infoproject project">
+            <p class="project__subtitle">Personal Project Card</p>
+            <hr class="project__line" />
+            <h2 class="project__title"><%= name%></h2>
+            <p class="project__slogan"><%= slogan%></p>
+            <p class="project__desc"><%= description%></p>
+            <section class="project__technologies">
+              <p class="project__technologies--text"><%= technologies%></p>
+              <div class="project__technologies--icon">
+                <a
+                  href="<%= demo %>"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="icon"
+                >
+                  <FontAwesomeIcon icon="{faGlobe}" />
+                </a>
+                <a
+                  href="<%= repo %>"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="icon"
+                >
+                  <FontAwesomeIcon icon="{faGithub}" />
+                </a>
+              </div>
+            </section>
+          </section>
+          <section class="preview__autor--infoautor infoAutor">
+            <img class="infoAutor__image" src="<%= image %>" alt="#" />
+            <p class="infoAutor__job"><%= job%></p>
+            <p class="infoAutor__name"><%= autor%></p>
+          </section>
+        </section>
+      </section>
+      <section class="returnSection">
+        <a class="link" href="http://localhost:3000/#/Archivo">
+          <p class="return">VOLVER</p>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

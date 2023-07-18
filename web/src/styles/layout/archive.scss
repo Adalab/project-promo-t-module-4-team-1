@@ -1,0 +1,57 @@
+@import '../core/mixins.scss';
+@import '../core/variables.scss';
+
+.archive {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.projectList {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    @media screen and (min-width:1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        list-style: none;
+        @media screen and (min-width:768px) {
+            width: 500px;
+        }
+
+        @media screen and (min-width:1024px) {
+            max-width: 500px;
+        }
+
+    }
+    &__btn {
+        width: 200px;
+            background: linear-gradient(90deg, $dark-lilac -1.57%, $light-lilac 98.43%);
+            padding: 10px 20px;
+            border-radius: 15px;
+            height: 43px;
+            border-radius: 20px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+}
+.preview__autor{
+    @media screen and (min-width:764px) {
+        height: 300px;
+    }
+}
+.link{
+    text-decoration: none;
+}
