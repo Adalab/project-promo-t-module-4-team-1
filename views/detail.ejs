@@ -9,7 +9,7 @@
   <script src="https://kit.fontawesome.com/b7d13fbbc9.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="body">
   <header class="header">
     <a class="header__link" href="/" class="link">
       <p class="header__text">
@@ -22,61 +22,63 @@
       <img class="header__logo" src="/logo-adalab.png" alt="logo Adalab" />
     </a>
   </header>
-  <main>
+  <main class="main">
     <h3 class="preview__title">Personal Project Card</h3>
-    <section class="preview__autor2">
-      <img class="infoAutor__image" src="<%= image %>" alt="#" />
-      <div class="infoautor2">
-        <p class="infoAutor__name">
-          <%= autor%>
-        </p>
-        <p class="infoAutor__job">
-          <%= job%>
-        </p>
-      </div>
-    </section>
-    <section class="preview">
-      <section class="preview__image">
-        <img class="preview__src" src="<%=photo%>" alt="#" />
-      </section>
-      <section class="preview__autor">
-        <section class="preview__autor--infoproject project">
-          <p class="project__subtitle">Personal Project Card</p>
-          <hr class="project__line" />
-          <h2 class="project__title">
-            <%= name%>
-          </h2>
-          <p class="project__slogan">
-            <%= slogan%>
-          </p>
-          <p class="project__desc">
-            <%= description%>
-          </p>
-          <section class="project__technologies">
-            <p class="project__technologies--text">
-              <%= technologies%>
-            </p>
-            <div class="icon">
-              <a href="<%= demo %>" rel="noreferrer" target="_blank" class="icon"><i class="fa-solid fa-globe"></i>
-              </a>
-              <a href="<%= repo %>" rel="noreferrer" target="_blank" class="icon">
-                <i class="fa-brands  fa-github"></i>
-                </i>
-              </a>
-            </div>
-          </section>
-        </section>
-        <!-- <section class="preview__autor--infoautor infoAutor">
-          <img class="infoAutor__image" src="<%= image %>" alt="#" />
-          <p class="infoAutor__job">
-            <%= job%>
-          </p>
+    <div class="card">
+      <section class="preview__autor2">
+        <img class="infoAutor__image" src="<%= image %>" alt="#" />
+        <div class="infoautor2">
           <p class="infoAutor__name">
             <%= autor%>
           </p>
-        </section> -->
+          <p class="infoAutor__job">
+            <%= job%>
+          </p>
+        </div>
       </section>
-    </section>
+      <section class="preview">
+        <section class="preview__image">
+          <img class="preview__src" src="<%=photo%>" alt="#" />
+        </section>
+        <section class="preview__autor">
+          <section class="preview__autor--infoproject project">
+            <p class="project__subtitle">Personal Project Card</p>
+            <hr class="project__line" />
+            <h2 class="project__title">
+              <%= name%>
+            </h2>
+            <p class="project__slogan">
+              <%= slogan%>
+            </p>
+            <p class="project__desc">
+              <%= description%>
+            </p>
+            <section class="project__technologies">
+              <p class="project__technologies--text">
+                <%= technologies%>
+              </p>
+              <div class="icon">
+                <a href="<%= demo %>" rel="noreferrer" target="_blank" class="icon"><i class="fa-solid fa-globe"></i>
+                </a>
+                <a href="<%= repo %>" rel="noreferrer" target="_blank" class="icon">
+                  <i class="fa-brands  fa-github"></i>
+                  </i>
+                </a>
+              </div>
+            </section>
+          </section>
+          <!-- <section class="preview__autor--infoautor infoAutor">
+            <img class="infoAutor__image" src="<%= image %>" alt="#" />
+            <p class="infoAutor__job">
+              <%= job%>
+            </p>
+            <p class="infoAutor__name">
+              <%= autor%>
+            </p>
+          </section> -->
+        </section>
+      </section>
+    </div>
     <section class="returnSection">
       <a class="link" href="http://localhost:3000/#/Archivo">
         <p class="return">VOLVER</p>

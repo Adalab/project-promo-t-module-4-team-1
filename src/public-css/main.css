@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-main {
+.main {
   background-color: #c0b7e8;
   padding-top: 60px 20px;
-  height: 200%;
+  /* height: 200%; */
   font-family: "Montserrat", sans-serif;
 }
 
@@ -22,7 +22,8 @@ main {
 .preview__autor2 {
   gap: 10px;
   border: none;
-  background-color: #ffffffa3;
+  background-color: #fff;
+  /* background-color: #ffffffa3; */
   color: #3e3e3e;
   width: 70vw;
   margin: auto;
@@ -62,7 +63,8 @@ main {
 .preview__autor {
   gap: 10px;
   border: none;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: #ffffffa3;
   color: #3e3e3e;
   width: 90%;
   transform: translateY(-20px);
@@ -220,7 +222,7 @@ main {
   }
 
   .preview__autor2 {
-    width: 60vw;
+    width: 350px;
   }
 }
 
@@ -231,6 +233,15 @@ main {
 
   .preview__autor {
     width: 50vw;
+  }
+
+  .preview {
+    padding-right: 0;
+  }
+
+  .card {
+    display: flex;
+    padding: 0 20px;
   }
 }
 
