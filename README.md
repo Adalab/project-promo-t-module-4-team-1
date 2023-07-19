@@ -17,13 +17,13 @@ At the same time, all data, both existing and newly created, are stored in a Fre
 
 ## How it works
 
-- The front-end part is structure 
+1. The front-end part is structure 
 The objectives were to create a **landing page** that briefly presents the web, and from which there is a button to access the **forms page**, from which you can upload your projects, and on the other hand, a page where you can see all the projects and another where you can see each one in detail.
 
 The three parts of the form page are as follows:
-- Data Form, with all required fields, such as Project Name, Demo Link, Repo Link, User Name, etc.
-- Preview section, to preview in advance the final look and feel.
-- Hero, with a functionality to access all the uploaded projects. For now, as there are no projects uploaded, a warning message has been left, until the backend development team allows to save them all.
+  - Data Form, with all required fields, such as Project Name, Demo Link, Repo Link, User Name, etc.
+  - Preview section, to preview in advance the final look and feel.
+  - Hero, with a functionality to access all the uploaded projects. For now, as there are no projects uploaded, a warning message has been left, until the backend development team allows to save them all.
 With the creation of a digital project file, which as mentioned before, can be shared with a link created with the information filled in.
 
 In addition, if the user can finish completing the form later, the data is saved in the Local Storage, so that she can continue with the fields already filled in.
@@ -31,7 +31,7 @@ In addition, if the user can finish completing the form later, the data is saved
 Both from the Landing page and from the Project creation page, you can access the page where you can view the collection of projects. 
 From this page, you can view each project individually.
 
-- The back-end part is located in the src folder with its main file "index.js", and static server files. 
+2.  The back-end part is located in the src folder with its main file "index.js", and static server files. 
 For the detail page a template engine has been used, which helps to render the detail page of the projects directly, each time a new project is saved or created. 
 In this case, EJS has been used for template creation.
 
