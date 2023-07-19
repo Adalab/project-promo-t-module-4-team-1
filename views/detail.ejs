@@ -7,13 +7,14 @@
   <title>Project detail</title>
   <link rel="stylesheet" href="/main.css" />
   <script src="https://kit.fontawesome.com/b7d13fbbc9.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="/favicon.png" />
 </head>
 
 <body class="body">
   <header class="header">
     <a class="header__link" href="/" class="link">
       <p class="header__text">
-        <!-- <FontAwesomeIcon icon={faLaptopCode} size="2xl" /> -->
+        
         <i class="header__icon fa-solid fa-laptop-code"></i>
         Programadoras Junior
       </p>
@@ -24,7 +25,17 @@
   </header>
   <main class="main">
     <h3 class="preview__title">Personal Project Card</h3>
-
+    <section class="preview__autor2">
+      <img class="infoAutor__image" src="<%= image %>" alt="#" />
+      <div class="infoautor2">
+        <p class="infoAutor__name">
+          <%= autor%>
+        </p>
+        <p class="infoAutor__job">
+          <%= job%>
+        </p>
+      </div>
+    </section>
     </section>
     <section class="preview">
       <section class="preview__image">
