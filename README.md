@@ -35,6 +35,8 @@ From this page, you can view each project individually.
 For the detail page a template engine has been used, which helps to render the detail page of the projects directly, each time a new project is saved or created. 
 In this case, EJS has been used for template creation.
 
+All data is stored in a FreeDB database, which we have worked on connected through MySQL Workbench,
+
 ## Team members: 👩🏻‍💻👩🏻‍💻👩🏼‍💻👩🏻‍💻👩🏻‍💻👩🏻‍💻
 
 - **Aida Blaya** @Aidablaya
