@@ -1,5 +1,5 @@
 const sendToApi = (data) => {
-  return fetch('http://localhost:4000/api/projectCard', {
+  return fetch('https://programadoras-junior.onrender.com/api/projectCard', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: { 'content-type': 'application/json' },
@@ -11,7 +11,7 @@ const sendToApi = (data) => {
 };
 
 const getAllCardsApi = async () => {
-  const fetchApi = await fetch ('http://localhost:4000/api/allprojects');
+  const fetchApi = await fetch ('https://programadoras-junior.onrender.com/api/allprojects');
   const dataJson = await fetchApi.json();
   return dataJson;
 }
