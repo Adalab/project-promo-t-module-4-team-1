@@ -22,7 +22,7 @@ const getConnection = async () => {
 }
 getConnection();
 
-const serverPort = 4000;
+const serverPort = process.env.PORT||4000;
 server.listen( serverPort, () => {
     console.log(`Nuestro servidor ha arrancado en http://localhost:${serverPort}/`);
 });
