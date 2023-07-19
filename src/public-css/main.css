@@ -22,8 +22,8 @@
 .preview__autor2 {
   gap: 10px;
   border: none;
-  background-color: #fff;
-  /* background-color: #ffffffa3; */
+  /* background-color: #fff; */
+  background-color: #ffffffa3;
   color: #3e3e3e;
   width: 70vw;
   margin: auto;
@@ -63,8 +63,8 @@
 .preview__autor {
   gap: 10px;
   border: none;
-  /* background-color: #fff; */
-  background-color: #ffffffa3;
+  background-color: #fff;
+  /* background-color: #ffffffa3; */
   color: #3e3e3e;
   width: 90%;
   transform: translateY(-20px);
