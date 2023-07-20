@@ -63,7 +63,7 @@ server.post("/api/projectCard", async (req,res) => {
     ]);
     conn.end();
     console.log(resultProject.insertId);
-    res.json({success:true, cardURL:`https://programadoras-junior.onrender.com/project/${resultProject.insertId}`});
+    res.json({success:true, cardURL:`https://programadoras-junior.onrender.com/api/projectCard/${resultProject.insertId}`});
   });
 
 server.get('/api/projectCard/:idProject', async (req, res) => {
