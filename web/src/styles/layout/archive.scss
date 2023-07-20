@@ -23,6 +23,8 @@
 
     &__card {
         list-style: none;
+
+
         @media screen and (min-width:768px) {
             width: 500px;
         }
@@ -32,26 +34,39 @@
         }
 
     }
+
     &__btn {
         width: 200px;
-            background: linear-gradient(90deg, $dark-lilac -1.57%, $light-lilac 98.43%);
-            padding: 10px 20px;
-            border-radius: 15px;
-            height: 43px;
-            border-radius: 20px;
-            cursor: pointer;
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        background: linear-gradient(90deg, $dark-lilac -1.57%, $light-lilac 98.43%);
+        padding: 10px 20px;
+        border-radius: 15px;
+        height: 43px;
+        border-radius: 20px;
+        cursor: pointer;
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
-.preview__autor{
+
+.preview__autor {
     @media screen and (min-width:764px) {
         height: 300px;
     }
 }
-.link{
+
+.preview__autor:hover {
+    box-shadow: 0 1px 1px rgba(black, .15),
+        0 3px 10px rgba(black, .15),
+        0 3px 20px rgba(black, .35);
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
     text-decoration: none;
 }
